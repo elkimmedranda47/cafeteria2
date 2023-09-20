@@ -39,6 +39,9 @@ class ProductoModel {
     }
 
     public function updateProducto($id, $data) {
+        
+
+
         $query = "UPDATE producto SET nombre = :nombre, descripcion = :descripcion, precio = :precio WHERE id = :id";
         $stmt = $this->db->prepare($query);
         $stmt->bindParam(':nombre', $data['nombre']);
@@ -51,6 +54,7 @@ class ProductoModel {
         } else {
             return false; // Fallo en la actualización
         }
+    
     }
 
     public function deleteProducto($id) {

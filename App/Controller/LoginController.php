@@ -14,6 +14,7 @@ class LoginController {
                 echo "Inicio de sesión fallido. Verifica tus credenciales.";
             }
         } else {
+           //por defecto
             include '../App/View/login_view.php';
           
         }
